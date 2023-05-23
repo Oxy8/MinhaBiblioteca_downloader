@@ -1,7 +1,7 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Set the book ID
-isbn="XXXXXXXX"
+isbn="9788540701434"
 
 # Check if the ISBN directory exists, create it if it doesn't
 if [ ! -d "$isbn" ]; then
@@ -9,7 +9,7 @@ if [ ! -d "$isbn" ]; then
 fi
 
 # paste the cookie here
-cookie="Cookie: Paste here" 
+cookie="./cookies.txt" 
 
 # Get the start and end page numbers from the command line
 START_PAGE=$1
@@ -24,13 +24,14 @@ for (( i=$START_PAGE; i<$END_PAGE; i++ )); do
     FILENAME="${i}.jpg"
 
     # Send the request with cookie headers and save the image
-    curl -s -H 'User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/112.0' -H "${cookie}" $URL -o "$isbn/$FILENAME"
+    curl -s -H 'User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/112.0' --cookie "${cookie}" $URL -o "$isbn/$FILENAME"
     
     # Print a message indicating the status of the download
-    if [ -f $FILENAME ]; then
-        echo "Downloaded page ${i} - Don't be a bot - Wait 4 seconds"
-        sleep 4
+    if [ -f $isbn/$FILENAME ]; then
+        echo "Downloaded page ${i} - Don't be a bot - Wait 7 seconds"
+        sleep 7
     else
         echo "Failed to download page ${i}"
+        sleep 7
     fi
 done
