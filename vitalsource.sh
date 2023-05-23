@@ -18,7 +18,7 @@ END_PAGE=$2
 # Loop through the pages and download each image
 for (( i=$START_PAGE; i<$END_PAGE; i++ )); do
     # Set the URL for the current page
-    URL="https://jigsaw.vitalsource.com/books/${isbn}/images/${i}"
+    URL="https://jigsaw.minhabiblioteca.com.br/books/${isbn}/images/${i}"
 
     # Set the output filename as the page number
     FILENAME="${i}.jpg"
