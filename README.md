@@ -1,7 +1,7 @@
 
 ## Forked from https://github.com/mrrootsec/vitalsource_downloader
 
-### Adapatação do original para utilizar com o MinhaBiblioteca
+### Adaptação do original para utilizar com o Minha Biblioteca
 
 # vitalsource_downloader
 
