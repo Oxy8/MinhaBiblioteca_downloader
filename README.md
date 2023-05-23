@@ -1,4 +1,10 @@
+
+## Forked from https://github.com/mrrootsec/vitalsource_downloader
+
+### Adapatação do original para utilizar com o MinhaBiblioteca
+
 # vitalsource_downloader
+
 Simple script to download Vitalsource book
 
 # Usage
