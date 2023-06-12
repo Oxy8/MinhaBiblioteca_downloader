@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Set the book ID
-isbn="9788540701434"
+isbn="9788577808311"
 
 # Check if the ISBN directory exists, create it if it doesn't
 if [ ! -d "$isbn" ]; then
@@ -28,8 +28,8 @@ for (( i=$START_PAGE; i<$END_PAGE; i++ )); do
     
     # Print a message indicating the status of the download
     if [ -f $isbn/$FILENAME ]; then
-        echo "Downloaded page ${i} - Don't be a bot - Wait 7 seconds"
-        sleep 7
+        echo "Downloaded page ${i} - Don't be a bot - Wait 5 seconds"
+        sleep 5
     else
         echo "Failed to download page ${i}"
         sleep 7
