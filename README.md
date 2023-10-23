@@ -23,7 +23,9 @@ To use the script, follow these steps:
 5. Type chmod +x minhabiblioteca_downloader.sh to make the script executable.
 6. Type ./minhabiblioteca_downloader.sh <start_page> <end_page> where <start_page> and <end_page> are the page numbers of the book images to download.
 
-For example, to download pages 1 to 9, type `./minhabiblioteca_downloader.sh 1 9`
+For example, to download pages 1 to 9, type `./minhabiblioteca_downloader.sh 1 9`.  
+
+Page 0 is the first page of the book.
 
 Note: the script will create a directory named after the ISBN number of the book in the same directory where the script is run. If the directory already exists, the script will continue downloading images to that directory.
 
