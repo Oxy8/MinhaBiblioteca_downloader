@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Set the book ID
-isbn="9788577808311"
+isbn=$1
 
 # Check if the ISBN directory exists, create it if it doesn't
 if [ ! -d "$isbn" ]; then
@@ -12,8 +12,8 @@ fi
 cookie="./cookies.txt" 
 
 # Get the start and end page numbers from the command line
-START_PAGE=$1
-END_PAGE=$2
+START_PAGE=$2
+END_PAGE=$3
 
 # Loop through the pages and download each image
 for (( i=$START_PAGE; i<$END_PAGE; i++ )); do
