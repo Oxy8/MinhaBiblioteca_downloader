@@ -21,7 +21,7 @@ To use the script, follow these steps:
 3. Use the cookies.txt extension to download the cookies from your browser and save the cookies.txt file in the same folder as this script. 
 4. Open a terminal and navigate to the directory where the script is saved.
 5. Type chmod +x minhabiblioteca_downloader.sh to make the script executable.
-6. Type ./minhabiblioteca_downloader.sh <start_page> <end_page + 1> where <start_page> and <end_page> are the page numbers of the book images to download.
+6. Type ./minhabiblioteca_downloader.sh <start_page> <end_page> where <start_page> and <end_page> are the page numbers of the book images to download.
 
 For example, to download pages 1 to 9, type `./minhabiblioteca_downloader.sh 1 10`
 
