@@ -20,7 +20,5 @@ Page 0 is the first page of the book.
 
 Note: the script will create a directory named after the ISBN number of the book in the same directory where the script is run. If the directory already exists, the script will continue downloading images to that directory.
 
-After downloading all images you can convert it to pdf using img2pdf tool by following command 
-
-`img2pdf $(ls $folder_name/*.jpg | sort -n) -o "$folder_name.pdf"`
+After downloading all images they will be converted into a pdf named after the ISBN code (requires ImageMagick to be installed).
 

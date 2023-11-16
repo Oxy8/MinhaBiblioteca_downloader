@@ -11,12 +11,8 @@ fi
 # paste the cookie here
 cookie="./cookies.txt" 
 
-# Get the start and end page numbers from the command line
-START_PAGE=$2
-END_PAGE=$3
-
 # Loop through the pages and download each image
-for (( i=$START_PAGE; i<=$END_PAGE; i++ )); do
+for i in $(seq -f "%05g" $2 $3); do
     # Set the URL for the current page
     URL="https://jigsaw.minhabiblioteca.com.br/books/${isbn}/images/${i}"
 
@@ -35,3 +31,6 @@ for (( i=$START_PAGE; i<=$END_PAGE; i++ )); do
         sleep 7
     fi
 done
+
+convert -quality 100 ${isbn}/*.jpg ${isbn}.pdf
+
